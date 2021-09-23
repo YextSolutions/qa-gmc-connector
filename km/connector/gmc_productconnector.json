@@ -1,0 +1,57 @@
+{
+  "$id": "gmc_productconnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "displayName": "Google Merchant Center Product Connector",
+  "entityType": "product",
+  "source": {
+    "sourceConfig": {
+      "apiPushConfig": {
+        "app": "229339",
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "resources"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Entity ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "Description",
+        "path": "description"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "richTextDescription",
+      "header": "Description",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}
