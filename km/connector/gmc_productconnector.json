@@ -1,6 +1,6 @@
 {
   "$id": "gmc_productconnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
   "displayName": "Google Merchant Center Product Connector",
   "entityType": "product",
   "source": {
