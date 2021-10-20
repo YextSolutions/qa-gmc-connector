@@ -63,6 +63,19 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "Availability"
+          ]
+        },
+        "plugin": "gmc_convertStockStatus",
+        "function": "convertStockStatus"
+      }
+    }
+  ],
   "mappings": [
     {
       "field": "stockStatus",
@@ -84,8 +97,23 @@
       ]
     },
     {
+      "field": "gtin",
+      "header": "GTIN",
+      "subfieldPath": []
+    },
+    {
       "field": "entityId",
       "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "sku",
+      "header": "Offer ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "color",
+      "header": "Color ",
       "subfieldPath": []
     },
     {
@@ -101,21 +129,6 @@
           "name": "currencyCode"
         }
       ]
-    },
-    {
-      "field": "sku",
-      "header": "Offer ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "color",
-      "header": "Color ",
-      "subfieldPath": []
-    },
-    {
-      "field": "gtin",
-      "header": "GTIN",
-      "subfieldPath": []
     }
   ],
   "scheduleConfig": {
