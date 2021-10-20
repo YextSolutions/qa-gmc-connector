@@ -13,7 +13,7 @@
     "baseSelector": {
       "type": "JSON",
       "header": "Entity Container",
-      "path": "resources"
+      "path": "products"
     },
     "selectors": [
       {
@@ -30,13 +30,43 @@
         "type": "JSON",
         "header": "Description",
         "path": "description"
+      },
+      {
+        "type": "JSON",
+        "header": "Availability",
+        "path": "availability"
+      },
+      {
+        "type": "JSON",
+        "header": "Price (Value)",
+        "path": "price.value"
+      },
+      {
+        "type": "JSON",
+        "header": "Price (Currency)",
+        "path": "price.currency"
+      },
+      {
+        "type": "JSON",
+        "header": "Offer ID",
+        "path": "offerId"
+      },
+      {
+        "type": "JSON",
+        "header": "Color ",
+        "path": "color"
+      },
+      {
+        "type": "JSON",
+        "header": "GTIN",
+        "path": "gtin"
       }
     ]
   },
   "mappings": [
     {
-      "field": "entityId",
-      "header": "Entity ID",
+      "field": "stockStatus",
+      "header": "Availability",
       "subfieldPath": []
     },
     {
@@ -45,8 +75,46 @@
       "subfieldPath": []
     },
     {
+      "field": "price",
+      "header": "Price (Value)",
+      "subfieldPath": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "field": "entityId",
+      "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
       "field": "name",
       "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "price",
+      "header": "Price (Currency)",
+      "subfieldPath": [
+        {
+          "name": "currencyCode"
+        }
+      ]
+    },
+    {
+      "field": "sku",
+      "header": "Offer ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "color",
+      "header": "Color ",
+      "subfieldPath": []
+    },
+    {
+      "field": "gtin",
+      "header": "GTIN",
       "subfieldPath": []
     }
   ],
