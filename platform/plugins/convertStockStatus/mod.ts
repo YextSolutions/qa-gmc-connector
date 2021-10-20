@@ -1,5 +1,5 @@
 export function convertStockStatus(availability: string) {
-	return switch(availability) {
+	switch(availability) {
 		case 'in stock':
 			return "IN_STOCK";
 		case 'out of stock':
