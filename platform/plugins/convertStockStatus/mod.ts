@@ -1,9 +1,12 @@
 export function convertStockStatus(availability: string) {
-    if (availability === 'in stock') {
-        return "IN_STOCK";
-    } else if (availability === 'out of stock' {
-        return "OUT_OF_STOCK";
-    } else if (availability === 'preorder') {
-        return "PRE_ORDER";
-    }
+	return switch(availability) {
+		case 'in stock':
+			return "IN_STOCK";
+		case 'out of stock':
+			return "OUT_OF_STOCK";
+		case 'preorder':
+			return "PRE_ORDER"
+		default: 
+			throw new TypeError('Invalid availability type.');
+	}
 }
