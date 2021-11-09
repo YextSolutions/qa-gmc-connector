@@ -7,7 +7,8 @@
     "sourceConfig": {
       "apiPushConfig": {
         "app": "229339",
-        "dataFormat": "JSON"
+        "dataFormat": "JSON",
+        "enabled": true
       }
     },
     "baseSelector": {
@@ -130,9 +131,5 @@
         }
       ]
     }
-  ],
-  "scheduleConfig": {
-    "useSourceSchedule": true,
-    "runMode": "DEFAULT"
-  }
+  ]
 }
